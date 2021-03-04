@@ -1,20 +1,14 @@
 const express = require ('express');
 const app = express();
 
-const port = 5500;
+const port = 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.use(express.static(__dirname + "/public"));
 
-app.get('/', (req, res) => {
-  res.render("index", {titulo:'mi titulo dinamico'})
-})
-
-app.get('/servicios', (req, res) => {
-  res.render("servicios", {servicios:"servicios desde las rutas"})
-})
+app.use('/', require('./router/rutasWeb'))
 
 app.listen(port, () => {
   console.log('el servidor esta a su dispocicion en el puerto', port)
