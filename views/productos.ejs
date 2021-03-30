@@ -1,0 +1,28 @@
+<%- include('../template/cabecera', {tituloWeb: 'página de productos'}) %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (arrayProductos.length > 0) { %>
+        <% arrayProductos.forEach(productos => { %>
+          <tr>
+            <th scope="row"><%= productos.id %> </th>
+            <td><%= productos.nombre %></td>
+            <td>csdc</td>
+          </tr>
+        <% }) %>
+       <% } %>
+    </tbody>
+  </table>
+</div>
+
+
+
+<%- include('../template/footer')  %> 
