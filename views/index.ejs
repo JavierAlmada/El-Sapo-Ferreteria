@@ -1,7 +1,13 @@
-<%- include('../template/cabecera', {tituloWeb: 'página de Inicio'}) %>
-<%- include('../template/carousel') %>
-<h1 class="text-primary">index.ejs</h1>
 
-<%- include('../views/index.e.ejs') %>
+  <%- include('../template/cabecera.ejs') %>
 
-<%- include('../template/footer')  %> 
+  
+<body>
+  <%- include('../template/navbar.ejs') %> 
+
+  <%- include('../template/carousel.ejs') %>
+
+  <%- include('../views/index.e.ejs') %>
+
+  <%- include('../template/footer.ejs')  %> 
+</body>

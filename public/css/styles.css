@@ -1,0 +1,13 @@
+.backgroundFondo {
+  background: -moz-linear-gradient(rgb(74, 201, 91) rgb(5, 116, 23));
+}
+.containerCarousel {
+  width: auto;
+  height: 300px;
+}
+
+.containerPicture .col-3 {
+  padding: 30px;
+  text-align: center;
+  background: #487b41;
+}
