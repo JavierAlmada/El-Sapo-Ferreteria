@@ -1,9 +1,9 @@
 {
-  "name": "El-Sapo-Ferreteria",
+  "name": "EL-SAPO-FERRETERIA",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "node app.js",
     "dev":"nodemon app"
   },
   "repository": {

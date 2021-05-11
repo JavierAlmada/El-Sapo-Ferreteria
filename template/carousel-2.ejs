@@ -1,0 +1,92 @@
+<!-- carousel de fotos  -->
+<div id="carousel<%= id %>" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <% let number = 0 %>
+    <% items.forEach(item => { %>
+      <li data-target="#carousel<%= id %>" data-slide-to="<%= number %> " class="active"></li>
+      <% number = number + 1 %> 
+    <% }) %>    
+  </ol>
+  <div class="carousel-inner">
+      <% items.forEach(item => { %> 
+          <div class="carousel-item <%= item.state %> ">
+              <img src="/public/img/<% item.img %>" class="d-block w-100" alt="..." width='1200%' height='600px'>
+              <div class="carousel-caption d-none d-md-block">
+                <h5> <%= item.title %>  </h5>
+                <p> <%= item.description %>  </p>
+              </div>
+          </div>
+      <% }) %>
+  </div>
+      <a class="carousel-control-prev" href="#carousel<%= id %>" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel<%= id %>" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+</div>
+
+<%- include('../template/carousel-2.ejs',
+  {id:'javi',
+    items:
+    [{state:'active',
+    img:'ingletadora.jpg',
+    title:'sable',
+    description:'lorem10',
+    },
+    {
+    img:'rotopercutor.jpg',
+    title:'sable',
+    description:'2121341230',
+    },
+    {
+    img:'caladora.jpg',
+    title:'sable',
+    description:'adfgsdf',
+    },
+    {
+    img:'atornillador.jpg',
+    title:'sable',
+    description:'loremadfvsdf10',
+    },
+    ]
+  }) %>
+
+
+<!-- carousel de columnas de fotos -->
+<div class="containerCarousel">
+  <div id="carousel<%= id %> " class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <% let number = 0 %>
+      <% items.forEach(item => { %>
+        <li data-target="#carousel<%= id %>" data-slide-to="<%= number %> " class="active"></li>
+        <% number = number + 1 %> 
+      <% }) %>
+    <div class="carousel-inner">
+      <div class="carousel-item <%= state %>">
+        <div class="row">
+          <% items.forEach(item => { %> 
+          <div class="containerPicture col-3">
+            <img src="/public/img/ <% item.img %>" width="100%" alt="">
+            <div class="titleDescription">
+              <h2><%= item.title %></h2>
+            <p><%= item.description %></p>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%= id %>" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel<%= id %>" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

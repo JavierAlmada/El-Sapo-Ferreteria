@@ -9,4 +9,8 @@ router.get('/servicios', (req, res) => {
   res.render("servicios")
 })
 
-module.exports = router;
+router.get('/carrito', (req, res) => {
+  res.render("carrito")
+})
+
+module.exports = router
